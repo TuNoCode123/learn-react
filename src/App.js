@@ -1,10 +1,12 @@
-import logo from "./logo.svg";
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import Mycomponent from "./component/Component1";
+import Home from "./component/home/navbar";
 function App() {
   return (
     <div>
-      <Mycomponent></Mycomponent>
+      <Home />
+      <Outlet></Outlet>
+      <div>dfasfasfa</div>
     </div>
   );
 }
