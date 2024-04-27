@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import User from "./component/user/user";
 import Admin from "./component/admin/admin";
 import House from "./component/home/home";
+import ManageUser from "./component/admin/content/manageUser";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
@@ -15,7 +16,9 @@ root.render(
       <Route path="/" element={<App />}>
         <Route index element={<House />} />
         <Route path="user" element={<User />} />
-        <Route path="admin" element={<Admin />} />
+      </Route>
+      <Route path="admin" element={<Admin />}>
+        <Route path="manage" element={<ManageUser />} />
       </Route>
     </Routes>
   </BrowserRouter>

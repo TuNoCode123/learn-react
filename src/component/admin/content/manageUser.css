@@ -1,0 +1,34 @@
+.add svg {
+  color: green;
+  cursor: pointer;
+}
+.modal-content {
+  width: 800px;
+  position: absolute;
+  left: 0;
+}
+.display-picture {
+  width: 100%;
+  height: 15rem;
+  border: 1px dashed black;
+  display: flex;
+  justify-content: center;
+}
+.display-picture .img {
+  width: 30%;
+  height: 100%;
+}
+.display-picture .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.newuser {
+  margin: 30px 50px;
+}
+.content .hr {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: red;
+}

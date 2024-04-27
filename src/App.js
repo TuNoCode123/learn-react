@@ -6,7 +6,6 @@ function App() {
     <div>
       <Home />
       <Outlet></Outlet>
-      <div>dfasfasfa</div>
     </div>
   );
 }
