@@ -1,0 +1,54 @@
+.dashboard-content {
+  width: 95%;
+  height: 500px;
+  margin: auto;
+  position: relative;
+  top: 50px;
+  display: flex;
+  gap: 20px;
+}
+.dashboard-content .l-content {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.dashboard-content .l-content .child {
+  width: calc(50% - 10px);
+  background-color: cadetblue;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dashboard-content .l-content .child > span:nth-child(2) {
+  font-size: 30px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.dashboard-content .l-content .child > span:nth-child(1) {
+  font-size: 18px;
+  font-weight: 700;
+  color: floralwhite;
+}
+.dashboard-content .l-content .child > span:nth-child(2):hover {
+  scale: 1.2;
+}
+.dashboard-content .l-content .child:nth-child(1) > span:nth-child(2) {
+  color: orange;
+}
+.dashboard-content .l-content .child:nth-child(2) > span:nth-child(2) {
+  color: purple;
+}
+.dashboard-content .l-content .child:nth-child(3) > span:nth-child(2) {
+  color: lightcoral;
+}
+.dashboard-content .l-content .child:nth-child(4) > span:nth-child(2) {
+  color: tomato;
+}
+.dashboard-content .r-content {
+  width: 60%;
+}

@@ -5,15 +5,27 @@ const SideBar = () => {
     <>
       <Sidebar>
         <Menu>
-          <MenuItem> Dashboard </MenuItem>
+          <span className="ps-menuitem-root ps-submenu-root css-16jesut">
+            <Link to="/admin/dashboard" className="ps-menu-button">
+              Dashboard
+            </Link>
+          </span>
           <SubMenu label="Features">
-            <li className="ps-menuitem-root css-1tqrhto">
+            <li className="ps-menuitem-root ps-submenu-root css-16jesut">
               <Link to="/admin/manage" className="ps-menu-button">
                 quản lí bài user
               </Link>
             </li>
-            <MenuItem> quản lí bài quizz </MenuItem>
-            <MenuItem> quản lí câu hỏi </MenuItem>
+            <li className="ps-menuitem-root ps-submenu-root css-16jesut">
+              <Link to="/admin/quizz" className="ps-menu-button">
+                quản lí bài quizz
+              </Link>
+            </li>
+            <li className="ps-menuitem-root ps-submenu-root css-16jesut">
+              <Link to="/admin/question" className="ps-menu-button">
+                quản lí bài question
+              </Link>
+            </li>
           </SubMenu>
         </Menu>
       </Sidebar>

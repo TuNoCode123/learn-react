@@ -1,0 +1,15 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 600px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.preview {
+  display: inline-block;
+  width: 80px;
+  overflow: hidden;
+  color: blue;
+}

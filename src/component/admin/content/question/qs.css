@@ -1,0 +1,75 @@
+.q-body {
+  width: 75%;
+  /* background-color: red; */
+}
+.q-body .question {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.q-body .question .ar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.q-body .question .q {
+  width: 67%;
+}
+.q-body .question .ar .plus {
+  margin-right: 10px;
+}
+.q-body .question .ar .plus svg {
+  width: 30px;
+  height: 30px;
+  color: purple;
+  cursor: pointer;
+}
+.q-body .question .ar .add-img svg {
+  width: 30px;
+  height: 30px;
+  color: blue;
+  cursor: pointer;
+}
+.q-body .question .ar .remove-img svg {
+  width: 30px;
+  height: 30px;
+  color: red;
+  cursor: pointer;
+}
+.q-body .answers {
+  width: 80%;
+  margin-left: 30px;
+}
+.q-body .answer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.q-body .answer .ans {
+  width: 600px;
+}
+.q-body .answer .rc-checkbox-input {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.q-body .answer .add-a svg {
+  width: 30px;
+  height: 30px;
+  color: blue;
+  cursor: pointer;
+  margin-right: -10px;
+}
+.q-body .answer .remove-a svg {
+  width: 30px;
+  height: 30px;
+  color: red;
+  cursor: pointer;
+}
+.css-b62m3t-container {
+  z-index: 5;
+}
+.ril-inner.ril__inner {
+  z-index: 10000;
+}

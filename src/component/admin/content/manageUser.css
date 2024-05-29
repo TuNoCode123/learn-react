@@ -2,33 +2,43 @@
   color: green;
   cursor: pointer;
 }
-.modal-content {
-  width: 800px;
-  position: absolute;
-  left: 0;
-}
-.display-picture {
-  width: 100%;
-  height: 15rem;
+.adduser {
+  padding: 20px;
+  margin-top: 5px;
   border: 1px dashed black;
+  width: 70%;
+}
+.table {
+  width: 70%;
+}
+.modal-dialog .modal-content {
+  width: 600px;
+  height: max-content;
+  transform: translateX(-100px);
+}
+.modal-dialog .modal-content .modal-body {
+  height: max-content;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 }
-.display-picture .img {
-  width: 30%;
+.modal-dialog .modal-content .modal-body > div:last-child {
+  height: 200px;
+  border: 1px dashed black;
+}
+.modal-dialog .modal-content .modal-body > div:last-child .img {
   height: 100%;
+  width: 200px;
+  margin: 0 auto;
 }
-.display-picture .img img {
+.modal-dialog .modal-content .modal-body > div:last-child .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.newuser {
-  margin: 30px 50px;
-}
-.content .hr {
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: red;
+.modal-dialog .modal-content .modal-body > div:last-child span {
+  position: relative;
+  height: max-content;
+  top: 40%;
+  left: 30%;
 }

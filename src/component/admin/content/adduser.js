@@ -2,12 +2,10 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { IoIosAddCircle } from "react-icons/io";
-import "./manageUser.css";
-import { prettyDOM } from "@testing-library/react";
 import { toast } from "react-toastify";
 import { apiAddUser } from "../../../services";
-const Example = () => {
-  const [show, setShow] = useState(false);
+const AddUser = (props) => {
+  const [show, setShow] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassWord] = useState("");
   const [name, setName] = useState("");
@@ -17,7 +15,6 @@ const Example = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handleImg = (event) => {
-    console.log("fkjahsfkjadsh");
     setPreImg(URL.createObjectURL(event.target.files[0]));
     setImg(event.target.files[0]);
   };
@@ -29,17 +26,20 @@ const Example = () => {
       );
   };
   const handleSubmit = async () => {
-    if (!password || !email || !name) {
-      toast.error("input missing");
-      return;
-    }
-    if (!validateEmail(email)) {
-      toast.error("Email invalid");
-      return;
-    }
-    const response = await apiAddUser(email, password, name, role, img);
-    response.EC ? toast.error(response.EM) : toast.success(response.EM);
-    setShow();
+    try {
+      if (!password || !email || !name) {
+        toast.error("input missing");
+        return;
+      }
+      if (!validateEmail(email)) {
+        toast.error("Email invalid");
+        return;
+      }
+      const response = await apiAddUser(email, password, name, role, img);
+      response.EC ? toast.error(response.EM) : toast.success(response.EM);
+      setShow();
+      props.setCurrentPage(1);
+    } catch (error) {}
   };
   return (
     <>
@@ -51,6 +51,7 @@ const Example = () => {
         onHide={handleClose}
         animation={false}
         className="display-model"
+        backdrop="static"
       >
         <Modal.Header closeButton>
           <Modal.Title>add user</Modal.Title>
@@ -130,4 +131,4 @@ const Example = () => {
     </>
   );
 };
-export default Example;
+export default AddUser;
